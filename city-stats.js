@@ -117,43 +117,133 @@ function getApi (event) {
 
                     var art = document.getElementById('art-galleries');
                     var artScore = parseInt(data.categories[4].data[0].float_value * 100);
-                    art.textContent = 'Art Galleries: ' + artScore;
+                    art.textContent = 'Art Galleries: ' + artScore + '%';
+                    if (artScore > 74) {
+                        art.setAttribute('style', 'background-color: green; color: white');
+                    } else if (artScore < 75 && artScore > 49) {
+                        art.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (artScore < 50 && artScore > 24) {
+                        art.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        art.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var cinema = document.getElementById('cinema');
                     var cinemaScore = parseInt(data.categories[4].data[2].float_value * 100);
-                    cinema.textContent = 'Cinema Venues: ' + cinemaScore;
+                    cinema.textContent = 'Cinema Venues: ' + cinemaScore + '%';
+                    if (cinemaScore > 74) {
+                        cinema.setAttribute('style', 'background-color: green; color: white');
+                    } else if (cinemaScore < 75 && cinemaScore > 49) {
+                        cinema.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (cinemaScore < 50 && cinemaScore > 24) {
+                        cinema.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        cinema.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var comedy = document.getElementById('comedy');
                     var comedyScore = parseInt(data.categories[4].data[4].float_value * 100);
-                    comedy.textContent = 'Comedy Clubs: ' + comedyScore;
+                    comedy.textContent = 'Comedy Clubs: ' + comedyScore + '%';
+                    if (comedyScore > 74) {
+                        comedy.setAttribute('style', 'background-color: green; color: white');
+                    } else if (comedyScore < 75 && comedyScore > 49) {
+                        comedy.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (comedyScore < 50 && comedyScore > 24) {
+                        comedy.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        comedy.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var concerts = document.getElementById('concerts');
                     var concertsScore = parseInt(data.categories[4].data[6].float_value * 100);
-                    concerts.textContent = 'Concert Venues: ' + concertsScore;
+                    concerts.textContent = 'Concert Venues: ' + concertsScore + '%';
+                    if (concertsScore > 74) {
+                        concerts.setAttribute('style', 'background-color: green; color: white');
+                    } else if (concertsScore < 75 && concertsScore > 49) {
+                        concerts.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (concertsScore < 50 && concertsScore > 24) {
+                        concerts.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        concerts.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var history = document.getElementById('history');
                     var historyScore = parseInt(data.categories[4].data[8].float_value * 100);
-                    history.textContent = 'Historical Sites: ' + historyScore;
+                    history.textContent = 'Historical Sites: ' + historyScore + '%';
+                    if (historyScore > 74) {
+                        history.setAttribute('style', 'background-color: green; color: white');
+                    } else if (historyScore < 75 && historyScore > 49) {
+                        history.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (historyScore < 50 && historyScore > 24) {
+                        history.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        history.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var museums = document.getElementById('museums');
                     var museumsScore = parseInt(data.categories[4].data[10].float_value * 100);
-                    museums.textContent = 'Museums: ' + museumsScore;
+                    museums.textContent = 'Museums: ' + museumsScore + '%';
+                    if ( museumsScore > 74) {
+                        museums.setAttribute('style', 'background-color: green; color: white');
+                    } else if (museumsScore < 75 && museumsScore > 49) {
+                        museums.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (museumsScore < 50 && museumsScore > 24) {
+                        museums.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        museums.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var performance = document.getElementById('performance');
                     var performanceScore = parseInt(data.categories[4].data[12].float_value * 100);
-                    performance.textContent = 'Performing Arts: ' + performanceScore;
+                    performance.textContent = 'Performing Arts: ' + performanceScore + '%';
+                    if ( performanceScore > 74) {
+                        performance.setAttribute('style', 'background-color: green; color: white');
+                    } else if (performanceScore < 75 && performanceScore > 49) {
+                        performance.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (performanceScore < 50 && performanceScore > 24) {
+                        performance.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        performance.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var sports = document.getElementById('sports');
                     var sportsScore = parseInt(data.categories[4].data[14].float_value * 100);
-                    sports.textContent = 'Sports Venues: ' + sportsScore;
+                    sports.textContent = 'Sports Venues: ' + sportsScore + '%';
+                    if ( sportsScore > 74) {
+                        sports.setAttribute('style', 'background-color: green; color: white');
+                    } else if (sportsScore < 75 && sportsScore > 49) {
+                        sports.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (sportsScore < 50 && sportsScore > 24) {
+                        sports.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        sports.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var zoos = document.getElementById('zoos');
                     var zoosScore = parseInt(data.categories[4].data[16].float_value * 100);
-                    zoos.textContent = 'Zoos: ' + zoosScore;
+                    zoos.textContent = 'Zoos: ' + zoosScore + '%';
+                    if ( zoosScore > 74) {
+                        zoos.setAttribute('style', 'background-color: green; color: white');
+                    } else if (zoosScore < 75 && zoosScore > 49) {
+                        zoos.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (zoosScore < 50 && zoosScore > 24) {
+                        zoos.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        zoos.setAttribute('style', 'background-color: red; color: white');
+                    }
 
                     var culture = document.getElementById('culture');
                     cultureAverage = parseInt((artScore + cinemaScore + comedyScore + concertsScore + historyScore + museumsScore + performanceScore + sportsScore + zoosScore)/9);
-                    culture.textContent = 'Culture Score: ' + cultureAverage;
+                    culture.textContent = 'Overall Score: ' + cultureAverage;
+                    if ( cultureAverage > 74) {
+                        culture.setAttribute('style', 'background-color: green; color: white');
+                    } else if (cultureAverage < 75 && cultureAverage > 49) {
+                        culture.setAttribute('style', 'background-color: yellow; color: black');
+                    } else if (cultureAverage < 50 && cultureAverage > 24) {
+                        culture.setAttribute('style', 'background-color: orange; color: black');
+                    } else {
+                        culture.setAttribute('style', 'background-color: red; color: white');
+                    }
                     
                     
                     
