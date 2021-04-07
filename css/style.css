@@ -43,7 +43,7 @@ font-family: 'Josefin Slab', serif; */
 }
 
 #modal1 {
-height: 83vh;
+height: 84vh;
 max-height: none;
 }
 
@@ -61,7 +61,13 @@ max-height: none;
 }
 
 #imgselection {
-    background-image: url(randomImageScript.js);
+    /* background-image: url(randomImageScript.js); */
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
