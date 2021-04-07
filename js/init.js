@@ -11,17 +11,12 @@ $(document).ready(function(){
   $('#modal1').modal('open');
   $('#cls').click(function(){
     $('#modal1').modal('close');                   
+    $('.dropdown-trigger').dropdown();
   });
 });
 
 // Dropdown
-// document.addEventListener('DOMContentLoaded', function(){
-//   var drop = document.querySelectorAll('.dropdown-trigger')
-//   M.Dropdown.init(drop{
-//     coverTrigger:false,
-//     closeOnClick:true,
-// })
-// });
+$('.dropdown-trigger').dropdown();
 
 // Images on Initial Modal
 $(document).ready(function (jQuery) {
