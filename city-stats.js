@@ -116,43 +116,43 @@ function getApi (event) {
 
 
                     var art = document.getElementById('art-galleries');
-                    var artScore = data.categories[4].data[0].float_value;
-                    art.textContent = 'Art Galleries: ' + data.categories[4].data[0].float_value;
+                    var artScore = parseInt(data.categories[4].data[0].float_value * 100);
+                    art.textContent = 'Art Galleries: ' + artScore;
 
                     var cinema = document.getElementById('cinema');
-                    var cinemaScore = data.categories[4].data[2].float_value;
-                    cinema.textContent = 'Cinema Venues: ' + data.categories[4].data[2].float_value;
+                    var cinemaScore = parseInt(data.categories[4].data[2].float_value * 100);
+                    cinema.textContent = 'Cinema Venues: ' + cinemaScore;
 
                     var comedy = document.getElementById('comedy');
-                    var comedyScore = data.categories[4].data[4].float_value;
-                    comedy.textContent = 'Comedy Clubs: ' + data.categories[4].data[4].float_value;
+                    var comedyScore = parseInt(data.categories[4].data[4].float_value * 100);
+                    comedy.textContent = 'Comedy Clubs: ' + comedyScore;
 
                     var concerts = document.getElementById('concerts');
-                    var concertsScore = data.categories[4].data[6].float_value;
-                    concerts.textContent = 'Concert Venues: ' + data.categories[4].data[6].float_value;
+                    var concertsScore = parseInt(data.categories[4].data[6].float_value * 100);
+                    concerts.textContent = 'Concert Venues: ' + concertsScore;
 
                     var history = document.getElementById('history');
-                    var historyScore = data.categories[4].data[8].float_value;
-                    history.textContent = 'Historical Sites: ' + data.categories[4].data[8].float_value;
+                    var historyScore = parseInt(data.categories[4].data[8].float_value * 100);
+                    history.textContent = 'Historical Sites: ' + historyScore;
 
                     var museums = document.getElementById('museums');
-                    var museumsScore = data.categories[4].data[10].float_value;
-                    museums.textContent = 'Museums: ' + data.categories[4].data[10].float_value;
+                    var museumsScore = parseInt(data.categories[4].data[10].float_value * 100);
+                    museums.textContent = 'Museums: ' + museumsScore;
 
                     var performance = document.getElementById('performance');
-                    var performanceScore = data.categories[4].data[12].float_value;
-                    performance.textContent = 'Performing Arts: ' + data.categories[4].data[12].float_value;
+                    var performanceScore = parseInt(data.categories[4].data[12].float_value * 100);
+                    performance.textContent = 'Performing Arts: ' + performanceScore;
 
                     var sports = document.getElementById('sports');
-                    var sportsScore = data.categories[4].data[14].float_value;
-                    sports.textContent = 'Sports Venues: ' + data.categories[4].data[14].float_value;
+                    var sportsScore = parseInt(data.categories[4].data[14].float_value * 100);
+                    sports.textContent = 'Sports Venues: ' + sportsScore;
 
                     var zoos = document.getElementById('zoos');
-                    var zoosScore = data.categories[4].data[16].float_value;
-                    zoos.textContent = 'Zoos: ' + data.categories[4].data[16].float_value;
+                    var zoosScore = parseInt(data.categories[4].data[16].float_value * 100);
+                    zoos.textContent = 'Zoos: ' + zoosScore;
 
                     var culture = document.getElementById('culture');
-                    cultureAverage = artScore + cinemaScore + comedyScore + concertsScore + historyScore + museumsScore + performanceScore + sportsScore + zoosScore;
+                    cultureAverage = parseInt((artScore + cinemaScore + comedyScore + concertsScore + historyScore + museumsScore + performanceScore + sportsScore + zoosScore)/9);
                     culture.textContent = 'Culture Score: ' + cultureAverage;
                     
                     
