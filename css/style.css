@@ -1,0 +1,67 @@
+/* font-family: 'Fredericka the Great', cursive;
+
+font-family: 'Josefin Slab', serif; */
+
+.custom-nav {
+    background-color: #2ceeeb;
+}
+
+.custom-nav li {
+    color: black;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.card {
+    border: 10px 10px 10px 10px;
+    border-style: outset;
+    border-color: #f9e4c4;
+    height: 400px;
+    background-color: f9e4c4;
+}
+
+.card .card-title {
+    /* background-color: #f9e4c4; */
+    border-bottom: 5px solid #f9e4c4;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+/* .card .card-content {
+    padding: 0px;
+
+} */
+
+
+.card ul {
+    padding: 24px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+}
+
+#modal1 {
+height: 83vh;
+max-height: none;
+}
+
+#modal1 h4 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+#modal1 p {
+    font-family: 'Josefin Slab', serif;
+}
+
+.modal-overlay {
+    opacity: none;
+    background: none;
+}
+
+#imgselection {
+    background-image: url(randomImageScript.js);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
