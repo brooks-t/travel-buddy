@@ -1,3 +1,6 @@
+// Mobile Navbar
+// $(document).ready(function(){
+//   $('.sidenav').sidenav();
 
 // Hero Images
 document.addEventListener('DOMContentLoaded', () => {

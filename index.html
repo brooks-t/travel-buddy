@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
     <title>Travel Buddy</title>
 </head>
 
@@ -20,13 +21,21 @@
     <nav class="custom-nav" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
+                <a href="#" class="brand-logo left"><i class="material-icons">beach_access</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <div class="input-field">
+                      <input id="search" type="search" required>
+                      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                      <i class="material-icons">close</i>
+                    </div>
 
+                <ul class="right">
                 <ul class="right">
                     <li><a href="#"></a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Recommended</a></li>
                 </ul>
             </div>
         </div>
