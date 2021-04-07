@@ -1,4 +1,5 @@
 var inputButton = document.querySelector('#input-button');
+var inputField = document.querySelector('#input-field');
 
 function getApi (event) {
     event.preventDefault();
@@ -68,7 +69,7 @@ function getApi (event) {
                 var uaImages = data._links['ua:images'].href;
                 console.log('>> Stored UA Image link: ' + uaImages);
 
-                    // GET IMAGE INFO ======================================
+                    /* GET IMAGE INFO ======================================
                     fetch(uaImages)
                     .then(function (response) {
                         return response.json();
@@ -81,7 +82,7 @@ function getApi (event) {
                         var cityImage = data.photos[0].image.web;
                         document.getElementById('city-image').src = cityImage;
                         console.log('>> Displayed Image on page');  
-                    })
+                    })*/
 
                     // display city bio link
                     var cityBio = document.getElementById('city-bio-link');
@@ -255,6 +256,7 @@ function getApi (event) {
 }
 
 inputButton.addEventListener('click', getApi);
+inputField.addEventListener('submit', getApi);
 
 /* TEMPLATE
 fetch('https://api.teleport.org/api/urban_areas/slug:' + city + '/details/')
