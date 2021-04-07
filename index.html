@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab:wght@100;200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
     <title>Travel Buddy</title>
 </head>
 
@@ -20,13 +22,21 @@
     <nav class="custom-nav" role="navigation">
         <div class="container">
             <div class="nav-wrapper">
+                <a href="#" class="brand-logo left"><i class="material-icons">beach_access</i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <div class="input-field">
+                      <input id="search" type="search" required>
+                      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                      <i class="material-icons">close</i>
+                    </div>
 
+                <ul class="right">
                 <ul class="right">
                     <li><a href="#"></a></li>
                 </ul>
                 <ul id="nav-mobile" class="side-nav">
                     <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Recommended</a></li>
                 </ul>
             </div>
         </div>
@@ -36,16 +46,15 @@
     <br>
     <br>
     <br>
-    <!-- Search Box -->
+    <!-- Search Box
     <div class="container">
         <div class="row">
             <div class="input-field col s4">
-                <input type="text" id="searchField" name="search" placeholder="Search...">
-    <button class="btn-success" id="get-button">
-        Search
-      </button>
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
             </div>
-           <!-- Favorites  -->
+            Favorites  -->
             <!-- <div class="col s8"> -->
                 <!-- Dropdown Trigger -->
                 <!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a> --> 
@@ -88,63 +97,61 @@
         </div>
     </div>
 
-
-<!-- City Stats and Attractions Boxes -->
-<div class="container">
-    <div class="row">
-        <div class="col s6">
-            <div class="card large">
-                <div class="card-content black-text">
-                 <!--BROOKS ADDED CODE TO THIS SECTION  -->
-                  <span class="card-title">City Stats</span>
-                  <ul id='city-details'>
-                    <li><strong><u>GENERAL INFO</u></strong></li>
-                    <li>Location: <span id='city-name'></span></li>
-                    <li>Population: <span id='population'></span></li>
-                    <li>Climate: <span id='climate'></span></li>
-                    <li>Language: <span id='language'></span></li>
-                    <li><u>CULTURE SCORES</u> </li>  
-                    <li>Art galleries: <span id='art-galleries'></span></li>
-                    <li>Cinema venues: <span id='cinema'></span></li>
-                    <li>Comedy clubs: <span id='comedy'></span></li>
-                    <li>Concert venues: <span id='concerts'></span></li>
-                    <li>Historical sites: <span id='history'></span></li>
-                    <li>Museums: <span id='museums'></span></li>
-                    <li>Performing arts: <span id='performance'></span></li>
-                    <li>Sports venues: <span id='sports'></span></li>
-                    <li>Zoos: <span id='zoos'></span></li>
-                    <li><span id='culture'></li>
-                    <li><a id='city-bio-link' href='#' target='_blank'>More Details</a></li>
-                </ul>
-
+    <!-- City Stats and Attractions Boxes -->
+    <div class="container">
+        <div class="row">
+            <div class="col s6">
+                <div class="card large">
+                    <div class="card-content black-text">
+                        <span class="card-title">City Stats</span>
+                        <ul>
+                            <li>Zombie ipsum reversus ab viral inferno</p>
+                            </li>
+                            <li>Zombie ipsum reversus ab viral inferno</p>
+                            </li>
+                            <li>Zombie ipsum reversus ab viral inferno</p>
+                            </li>
+                            <li>Zombie ipsum reversus ab viral inferno</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col s6">
-            <div class="card large">
-                <div class="card-content black-text" id="scroll">
-                  <span class="card-title">Attractions</span>
-                  <table class=" justify-center align-items-center" id="results">
-                    <th>
-                      <p class="my-4"></p>
-                    </th>
-                    <tbody id="dataTable" class="justify-center mx-auto text-center"></tbody>
-                  </table>
+            <div class="col s6">
+                <div class="card large">
+                    <div class="card-content black-text">
+                        <span class="card-title">Attractions</span>
+                        <ul>
+                            <li><img src="https://placeimg.com/75/75/arch">
+                                <p>Zombie ipsum reversus ab viral inferno</p>
+                            </li>
+                            <li><img src="https://placeimg.com/75/75/arch">
+                                <p>Zombie ipsum reversus ab viral inferno</p>
+                            </li>
+                            <li><img src="https://placeimg.com/75/75/arch">
+                                <p>Zombie ipsum reversus ab viral inferno</p>
+                            </li>
+                            <li><img src="https://placeimg.com/75/75/arch">
+                                <p>Zombie ipsum reversus ab viral inferno</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Covid Info Box -->
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-            <div class="card">
-                <div class="card-content black-text">
-                  <span class="card-title">Covid Information</span>
-                  <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum.</p>
-                  <iframe style="width: 800px; height: 645px" src="https://covid19.biglocalnews.org/county-maps/index.html?embed=usa&v=cases#/" frameborder="0" scrolling="no" ></iframe>
-                  <!--MAP not styled yet or set for div but here is the link-->
+    <!-- Covid Info Box -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content black-text">
+                        <span class="card-title">Covid Information</span>
+                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering
+                            animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger
+                            omero undead survivor dictum.</p>
+                    </div>
                 </div>
             </div>
         </div>
