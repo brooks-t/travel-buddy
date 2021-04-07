@@ -1,3 +1,4 @@
+// will need to make sure these have correct ID NAMES after merging
 var inputButton = document.querySelector('#input-button');
 var inputField = document.querySelector('#input-field');
 
