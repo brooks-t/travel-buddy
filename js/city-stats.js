@@ -1,13 +1,13 @@
 // will need to make sure these have correct ID NAMES after merging
-var inputButton = document.querySelector('#input-button');
-var inputField = document.querySelector('#input-field');
+var searchButton = document.querySelector('#search-button');
+var search = document.querySelector('#search');
 
 function getApi (event) {
     event.preventDefault();
 
     // store value from input field and convert it to all lowercase
-    var inputField = document.querySelector('#input-field');
-    var city = inputField.value.toLowerCase();
+    var search = document.querySelector('#search');
+    var city = search.value.toLowerCase();
     console.log('Lowercase: ' + city);
 
     // GET ROOT API ======================================================
@@ -256,8 +256,8 @@ function getApi (event) {
     })
 }
 
-inputButton.addEventListener('click', getApi);
-inputField.addEventListener('submit', getApi);
+searchButton.addEventListener('click', getApi);
+search.addEventListener('submit', getApi);
 
 /* TEMPLATE
 fetch('https://api.teleport.org/api/urban_areas/slug:' + city + '/details/')
