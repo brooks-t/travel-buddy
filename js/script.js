@@ -37,8 +37,8 @@ function getApi(){
             
             
             //changing colors& styles
-            createTableRow.style.backgroundColor = '#ccffff';
-            tableData.style.border = 'medium solid #000000';
+            createTableRow.style.backgroundColor = '#FEFDDE';
+            tableData.style.border = 'medium solid #F9E4C4';
             tableData.style.borderRadius = '10px';
             createTableRow.style.margin = '8px';
             eventImg.style.width = '300px';

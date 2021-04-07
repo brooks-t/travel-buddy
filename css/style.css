@@ -65,3 +65,9 @@ max-height: none;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+

@@ -37,9 +37,10 @@
     <div class="container">
         <div class="row">
             <div class="input-field col s4">
-                <input id="search" type="search" required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
+                <input type="text" id="searchField" name="search" placeholder="Search...">
+    <button class="btn-success" id="get-button">
+        Search
+      </button>
             </div>
                 <!-- Favorites -->
             <div class="col s8 l8">
@@ -111,14 +112,14 @@
         </div>
         <div class="col s6">
             <div class="card large">
-                <div class="card-content black-text">
+                <div class="card-content black-text" id="scroll">
                   <span class="card-title">Attractions</span>
-                  <ul>
-                    <li><img src="https://placeimg.com/75/75/arch"><p>Zombie ipsum reversus ab viral inferno</p></li>
-                    <li><img src="https://placeimg.com/75/75/arch"><p>Zombie ipsum reversus ab viral inferno</p></li>
-                    <li><img src="https://placeimg.com/75/75/arch"><p>Zombie ipsum reversus ab viral inferno</p></li>
-                    <li><img src="https://placeimg.com/75/75/arch"><p>Zombie ipsum reversus ab viral inferno</p></li>
-                </ul>
+                  <table class=" justify-center align-items-center" id="results">
+                    <th>
+                      <p class="my-4"></p>
+                    </th>
+                    <tbody id="dataTable" class="justify-center mx-auto text-center"></tbody>
+                  </table>
                 </div>
             </div>
         </div>
@@ -133,6 +134,8 @@
                 <div class="card-content black-text">
                   <span class="card-title">Covid Information</span>
                   <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum.</p>
+                  <iframe style="width: 800px; height: 645px" src="https://covid19.biglocalnews.org/county-maps/index.html?embed=usa&v=cases#/" frameborder="0" scrolling="no" ></iframe>
+                  <!--MAP not styled yet or set for div but here is the link-->
                 </div>
             </div>
         </div>
@@ -151,6 +154,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
+<script src="js/script.js"></script>
 <script>
 
 
