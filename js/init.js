@@ -1,6 +1,3 @@
-// Mobile Navbar
-// $(document).ready(function(){
-//   $('.sidenav').sidenav();
 
 // Hero Images
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,13 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   M.Parallax.init(parallaxEffect, {});
 });
 
-// Modal
+// Modal, Dropdown, and Nav
 $(document).ready(function(){
+  $('.dropdown-trigger').dropdown();
+  $('.sidenav').sidenav();
   $('.modal').modal();
   $('#modal1').modal('open');
   $('#cls').click(function(){
     $('#modal1').modal('close');                   
-    $('.dropdown-trigger').dropdown();
   });
 });
 

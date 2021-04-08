@@ -2,6 +2,15 @@
 
 font-family: 'Josefin Slab', serif; */
 
+.input-field {
+    background-color: white;
+}
+
+nav .input-field label i {
+    color: black;
+    font-size: 30px;
+}
+
 .custom-nav {
     background-color: #2ceeeb;
 }
@@ -11,6 +20,28 @@ font-family: 'Josefin Slab', serif; */
     font-family: 'Josefin Slab', serif;
     font-weight: 600;
     font-size: larger;
+}
+
+nav .brand-logo i {
+    font-size: 30px;
+}
+
+.btn {
+    background-color: #fefdde;
+    color: black;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+    border: 10px 10px 10px 10px;
+    border-style: outset;
+    border-color: #f9e4c4;
+}
+
+.btn:hover {
+    background-color: #f9e4c4;
+}
+
+.btn:focus {
+    background-color: #fefdde;
 }
 
 .card {
@@ -29,12 +60,6 @@ font-family: 'Josefin Slab', serif; */
     text-align: center;
 
 }
-
-/* .card .card-content {
-    padding: 0px;
-
-} */
-
 
 .card ul {
     padding: 24px;
@@ -61,7 +86,6 @@ max-height: none;
 }
 
 #imgselection {
-    /* background-image: url(randomImageScript.js); */
     background-repeat: no-repeat;
     background-size: cover;
 }
