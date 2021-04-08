@@ -2,7 +2,20 @@
 var searchButton = document.querySelector('#search-button');
 var search = document.querySelector('#search');
 var searchForm = document.querySelector('#search-form');
+var addFavorite = document.querySelector('#dropdown1');
 
+function getFavorites() {
+    if (localStorage.getItem('storedFavorites') == null) {
+        localStorage.setItem('storedFavorites', '[]');
+    }
+    var storedFavorites = JSON.parse(localStorage.getItem('storedFavorites'));
+
+    for (i = 0; i < storedFavorites.length; i++) {
+        var savedFavorite = document.createElement('li');
+        savedFavorite.textContent = storedFavorites[i];
+        addFavorite.appendChild(savedCity);
+    }
+}
 
 function getApi (event) {
     event.preventDefault();
@@ -35,8 +48,6 @@ function getApi (event) {
             var cityName = document.getElementById('city-name');
             cityName.textContent = data._embedded['city:search-results'][0].matching_full_name;
             console.log('>> City name now displayed');
-
-            // TODO: Can possibly add 'alternate names' what the locals might call it
 
             // store geonameid
             geoNameId = data._embedded['city:search-results'][0]._links['city:item'].href;
@@ -259,9 +270,11 @@ function getApi (event) {
     })
 }
 
+
+
 searchButton.addEventListener('click', getApi);
 searchForm.addEventListener('submit', getApi);
-
+addFavorite.addEventListener('click', )
 /* TEMPLATE
 fetch('https://api.teleport.org/api/urban_areas/slug:' + city + '/details/')
     .then(function (response) {
