@@ -21,7 +21,6 @@ function getApi(event){
           //loop over data for our needs
           for (var i =0; i < data._embedded.events.length; i++){
 
-
             //creating elements
             var createTableRow = document.createElement('tr');
             var tableData = document.createElement('td');

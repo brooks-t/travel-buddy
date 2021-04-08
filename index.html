@@ -24,7 +24,7 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo left"><i class="material-icons">beach_access</i></a>
             <ul class="right">
-                <li>
+                <li id='fav-button'>
                     <a onclick="M.toast({html: 'Added destination!'})" class='btn'>Add Favorites</a>
                 </li>
                 <li>
@@ -46,13 +46,9 @@
           </form>
         </div>
       </nav>
-    <!-- Dropdown Structure of Favorites Menu -->
+
+      <!-- Dropdown Structure of Favorites Menu -->
     <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li><a href="#!">three</a></li>
-        <li><a href="#!">four</a></li>
-        <li><a href="#!">five</a></li>
     </ul>
 
     <!-- Modal Overlay upon Load -->
@@ -113,7 +109,7 @@
             <div class="col s12 m6">
                 <div class="card large">
                     <div class="card-content black-text" id="scroll">
-                        <span class="card-title">Attractions</span>
+                        <span class="card-title">Events</span>
                         <table class=" justify-center align-items-center" id="results">
                             <th>
                                 <p class="my-4"></p>

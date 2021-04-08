@@ -2,9 +2,27 @@
 var searchButton = document.querySelector('#search-button');
 var search = document.querySelector('#search');
 var searchForm = document.querySelector('#search-form');
+var favButton = document.querySelector('#fav-button');
+var favList = document.querySelector('#dropdown1');
+console.log('Starting out favList: ' + favList);
 
+// retrieve stored list of favorite searches
+function getFavorites() {
+    if (localStorage.getItem('storedFavorites') == null) {
+        localStorage.setItem('storedFavorites', '[]');
+    }
+    var storedFavorites = JSON.parse(localStorage.getItem('storedFavorites'));
 
-function getApi (event) {
+    for (i = 0; i < storedFavorites.length; i++) {
+        var savedFavorite = document.createElement('li');
+        savedFavorite.textContent = storedFavorites[i];
+        console.log('populating favorites');
+        favList.appendChild(savedFavorite);
+    }
+}
+
+// search the teleport api
+function getApi(event) {
     event.preventDefault();
     event.stopPropagation();
 
@@ -35,8 +53,6 @@ function getApi (event) {
             var cityName = document.getElementById('city-name');
             cityName.textContent = data._embedded['city:search-results'][0].matching_full_name;
             console.log('>> City name now displayed');
-
-            // TODO: Can possibly add 'alternate names' what the locals might call it
 
             // store geonameid
             geoNameId = data._embedded['city:search-results'][0]._links['city:item'].href;
@@ -109,12 +125,12 @@ function getApi (event) {
                     
                     // retrieve and display the city climate
                     var climate = document.getElementById('climate');
-                    climate.textContent = 'Climate: ' + data.categories[2].data[8].string_value;
+                    climate.textContent = data.categories[2].data[8].string_value;
                     console.log('>> Displayed climate to the page');
 
                     // retrieve and display the city language
                     var climate = document.getElementById('language');
-                    language.textContent = 'Language: ' + data.categories[11].data[2].string_value;
+                    language.textContent = data.categories[11].data[2].string_value;
                     console.log('>> Displayed language to the page');
 
                     // retrieve scores for 9 cultural data points and display them
@@ -259,8 +275,45 @@ function getApi (event) {
     })
 }
 
+// store search when add fav button pressed
+function storeFavorite(event) {
+    event.stopPropagation();
+
+    console.log('You clicked me!');
+
+    var searchCity = search.value;
+    console.log(searchCity);
+
+    var storedFavorites = JSON.parse(localStorage.getItem('storedFavorites'));
+    storedFavorites.push(searchCity);
+    localStorage.setItem('storedFavorites', JSON.stringify(storedFavorites));
+
+    var listFavorite = document.createElement('li');
+    listFavorite.textContent = searchCity;
+    favList.appendChild(listFavorite);
+
+}
+
+// search api for favorite when clicked
+function searchFavorite(event) {
+    event.stopPropagation();
+    var element = event.target;
+
+    if (element.matches('li')) {
+        var searchAgain = event.target.textContent;
+        console.log("You searched for your favorite: " + searchAgain);
+        search.value = searchAgain;
+        console.log("search bar should now be set to: " + searchAgain);
+        searchButton.click();
+    }
+}
+
+getFavorites();
+
 searchButton.addEventListener('click', getApi);
 searchForm.addEventListener('submit', getApi);
+favButton.addEventListener('click', storeFavorite);
+favList.addEventListener('click', searchFavorite);
 
 /* TEMPLATE
 fetch('https://api.teleport.org/api/urban_areas/slug:' + city + '/details/')
