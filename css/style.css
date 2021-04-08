@@ -99,3 +99,18 @@ max-height: none;
     overflow-x: hidden;
 }
 
+/* Brooks Styling -------------------------*/
+.covid {
+    height: 800px;
+}
+
+#city-details li {
+    margin-top: 1px;
+}
+
+#city-details span {
+    padding: 3px;
+    border-radius: 3px;
+}
+
+
