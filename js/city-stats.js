@@ -1,11 +1,13 @@
-var inputButton = document.querySelector('#input-button');
+// will need to make sure these have correct ID NAMES after merging
+var searchButton = document.querySelector('#search-button');
+var search = document.querySelector('#search');
 
 function getApi (event) {
     event.preventDefault();
 
     // store value from input field and convert it to all lowercase
-    var inputField = document.querySelector('#input-field');
-    var city = inputField.value.toLowerCase();
+    var search = document.querySelector('#search');
+    var city = search.value.toLowerCase();
     console.log('Lowercase: ' + city);
 
     // GET ROOT API ======================================================
@@ -68,7 +70,7 @@ function getApi (event) {
                 var uaImages = data._links['ua:images'].href;
                 console.log('>> Stored UA Image link: ' + uaImages);
 
-                    // GET IMAGE INFO ======================================
+                    /* GET IMAGE INFO ======================================
                     fetch(uaImages)
                     .then(function (response) {
                         return response.json();
@@ -81,7 +83,7 @@ function getApi (event) {
                         var cityImage = data.photos[0].image.web;
                         document.getElementById('city-image').src = cityImage;
                         console.log('>> Displayed Image on page');  
-                    })
+                    })*/
 
                     // display city bio link
                     var cityBio = document.getElementById('city-bio-link');
@@ -254,7 +256,8 @@ function getApi (event) {
     })
 }
 
-inputButton.addEventListener('click', getApi);
+searchButton.addEventListener('click', getApi);
+search.addEventListener('submit', getApi);
 
 /* TEMPLATE
 fetch('https://api.teleport.org/api/urban_areas/slug:' + city + '/details/')

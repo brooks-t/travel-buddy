@@ -1,8 +1,8 @@
 var tableBody = document.getElementById('results');
-var fetchButton = document.getElementById('get-button');
+var fetchButton = document.getElementById('search-button'); // changed id to match with html -bt
 
 function getApi(){
-    var searchField = document.getElementById('searchField');
+    var searchField = document.getElementById('search'); // changed id to match with html -bt
 
     var requestUrl = 'https://app.ticketmaster.com/discovery/v2/events.json?city='+searchField.value+'&apikey=Enbe7EvmaJcFDISS11Qk5cMImrLCPkBI';
 
@@ -37,8 +37,8 @@ function getApi(){
             
             
             //changing colors& styles
-            createTableRow.style.backgroundColor = '#ccffff';
-            tableData.style.border = 'medium solid #000000';
+            createTableRow.style.backgroundColor = '#FEFDDE';
+            tableData.style.border = 'medium solid #F9E4C4';
             tableData.style.borderRadius = '10px';
             createTableRow.style.margin = '8px';
             eventImg.style.width = '300px';

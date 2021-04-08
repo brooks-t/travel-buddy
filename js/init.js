@@ -30,9 +30,6 @@ $(document).ready(function (jQuery) {
       indexImages.push(index);
       jQuery(this).hide();
   });
-  // var selectedImage = images[Math.floor(Math.random() * images.length)];
-  // jQuery('body').css('background-image', 'url(' + selectedImage + ')');
-// // OR Show one image
  var selectedIndexImage = indexImages[Math.floor(Math.random() * indexImages.length)];
  jQuery('#imgselection img').eq(selectedIndexImage).show();
 });
