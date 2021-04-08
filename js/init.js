@@ -5,13 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   M.Parallax.init(parallaxEffect, {});
 });
 
-// Modal
+// Modal, Dropdown, and Nav
 $(document).ready(function(){
+  $('.dropdown-trigger').dropdown();
+  $('.sidenav').sidenav();
   $('.modal').modal();
   $('#modal1').modal('open');
   $('#cls').click(function(){
     $('#modal1').modal('close');                   
-    $('.dropdown-trigger').dropdown();
   });
 });
 
@@ -27,9 +28,6 @@ $(document).ready(function (jQuery) {
       indexImages.push(index);
       jQuery(this).hide();
   });
-  // var selectedImage = images[Math.floor(Math.random() * images.length)];
-  // jQuery('body').css('background-image', 'url(' + selectedImage + ')');
-// // OR Show one image
  var selectedIndexImage = indexImages[Math.floor(Math.random() * indexImages.length)];
  jQuery('#imgselection img').eq(selectedIndexImage).show();
 });

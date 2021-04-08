@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +9,9 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Josefin+Slab:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
     <title>Travel Buddy</title>
@@ -20,60 +21,38 @@
 
     <!-- Navigation Menu -->
     <nav class="custom-nav" role="navigation">
-        <div class="container">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo left"><i class="material-icons">beach_access</i></a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                        <div class="input-field">
-                            <input id="search" type="search" required>
-                            <!-- I added an ID to the search icon -->
-                            <label class="label-icon" for="search"><i id="search-button" class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                          </div>
-
-                <ul class="right">
-                <ul class="right">
-                    <li><a href="#"></a></li>
-                </ul>
-                <ul id="nav-mobile" class="side-nav">
-                    <li><a href="#">Favorites</a></li>
-                </ul>
-            </div>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo left"><i class="material-icons">beach_access</i></a>
+            <ul class="right">
+                <li>
+                    <!-- Dropdown Trigger for Favorites Button -->
+                    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Favorites</a>
+                </li>
+            </ul>
         </div>
     </nav>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <!-- Search Box
-    <div class="container">
-        <div class="row">
-            <div class="input-field col s4">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
+    <!-- Search Box -->
+    <nav>
+        <div class="nav-wrapper">
+          <form>
+            <div class="input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
             </div>
-            Favorites  -->
-            <!-- <div class="col s8"> -->
-                <!-- Dropdown Trigger -->
-                <!-- <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a> --> 
-
-                <!-- Dropdown Structure -->
-                <!-- <ul id='dropdown1' class='dropdown-content'> -->
-                    <!-- <li><a href="#!">one</a></li>
-                    <li><a href="#!">two</a></li>
-                    <li class="divider" tabindex="-1"></li>
-                    <li><a href="#!">three</a></li>
-                    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-                    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li> -->
-                <!-- </ul>
-            </div>
+          </form>
         </div>
-    </div>  -->
-   
-    <!-- Modal -->
+      </nav>
+    <!-- Dropdown Structure of Favorites Menu -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li><a href="#!">three</a></li>
+        <li><a href="#!">four</a></li>
+        <li><a href="#!">five</a></li>
+    </ul>
+
+    <!-- Modal Overlay upon Load -->
     <div id="modal1" class="modal bottom-sheet">
         <div class="modal-content center ">
             <div class="modal-content">
@@ -99,11 +78,11 @@
     </div>
 
     <!-- City Stats and Attractions Boxes -->
-    <div class="container">
+    <div>
         <div class="row">
-            <div class="col s6">
+            <div class="col s12 m6">
                 <div class="card large">
-                    <div class="card-content black-text"> 
+                    <div class="card-content black-text">
                         <!--BROOKS CARD -->
                         <span class="card-title">City Stats</span>
                         <ul id='city-details'>
@@ -112,7 +91,7 @@
                             <li>Population: <span id='population'></span></li>
                             <li>Climate: <span id='climate'></span></li>
                             <li>Language: <span id='language'></span></li>
-                            <li><u>CULTURE SCORES</u> </li>  
+                            <li><u>CULTURE SCORES</u> </li>
                             <li>Art galleries: <span id='art-galleries'></span></li>
                             <li>Cinema venues: <span id='cinema'></span></li>
                             <li>Comedy clubs: <span id='comedy'></span></li>
@@ -128,13 +107,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col s6">
+            <div class="col s12 m6">
                 <div class="card large">
                     <div class="card-content black-text" id="scroll">
                         <span class="card-title">Attractions</span>
                         <table class=" justify-center align-items-center" id="results">
                             <th>
-                              <p class="my-4"></p>
+                                <p class="my-4"></p>
                             </th>
                             <tbody id="dataTable" class="justify-center mx-auto text-center"></tbody>
                         </table>
@@ -145,13 +124,15 @@
     </div>
 
     <!-- Covid Info Box -->
-    <div class="container">
+    <div>
         <div class="row">
             <div class="col s12">
                 <div class="card">
                     <div class="card-content black-text">
                         <span class="card-title">Covid Information</span>
-                        <iframe style="width: 100%; height: 300px" src="https://covid19.biglocalnews.org/county-maps/index.html?embed=usa&v=cases#/" frameborder="0" scrolling="yes" ></iframe>
+                        <iframe style="width: 100%; height: 300px"
+                            src="https://covid19.biglocalnews.org/county-maps/index.html?embed=usa&v=cases#/"
+                            frameborder="0" scrolling="yes"></iframe>
                     </div>
                 </div>
             </div>
@@ -167,7 +148,6 @@
 
 </body>
 
-<!-- <script src="js/jquery.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/city-stats.js"></script>
