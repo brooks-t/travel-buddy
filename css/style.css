@@ -1,6 +1,3 @@
-/* font-family: 'Fredericka the Great', cursive;
-
-font-family: 'Josefin Slab', serif; */
 
 .input-field {
     background-color: white;
@@ -44,12 +41,19 @@ nav .brand-logo i {
     background-color: #fefdde;
 }
 
+.toast {
+    background-color: #f9e4c4;
+    border-radius: 15px;
+    color: black;
+    font-family: 'Fredericka the Great', cursive;
+    border: 1px solid #afafaf;
+}
+
 .card {
     border: 10px 10px 10px 10px;
     border-style: outset;
     border-color: #f9e4c4;
     height: 400px;
-    background-color: f9e4c4;
 }
 
 .card .card-title {
