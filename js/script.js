@@ -8,13 +8,14 @@ function getApi(event){
     var searchField = document.getElementById('search'); // changed id to match with html -bt
 
     var requestUrl = 'https://app.ticketmaster.com/discovery/v2/events.json?city='+searchField.value+'&apikey=Enbe7EvmaJcFDISS11Qk5cMImrLCPkBI';
-
+    
     fetch(requestUrl)
       .then(function(response){
           return response.json();
       })
       .then(function(data){
           console.log(data)
+          tableBody.innerHTML = "";
           console.log(data._embedded.events[0].name)
 
           //loop over data for our needs
