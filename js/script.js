@@ -1,7 +1,10 @@
 var tableBody = document.getElementById('results');
 var fetchButton = document.getElementById('search-button'); // changed id to match with html -bt
+var searchForm = document.querySelector('#search-form'); // added this global variable to listen for search-form submission -bt
 
-function getApi(){
+function getApi(event){
+  event.preventDefault(); // added these two lines to prevent unwanted form/button behavior -bt
+  event.stopPropagation();
     var searchField = document.getElementById('search'); // changed id to match with html -bt
 
     var requestUrl = 'https://app.ticketmaster.com/discovery/v2/events.json?city='+searchField.value+'&apikey=Enbe7EvmaJcFDISS11Qk5cMImrLCPkBI';
@@ -62,3 +65,4 @@ function getApi(){
 }
 
 fetchButton.addEventListener('click', getApi);
+searchForm.addEventListener('submit', getApi); // added to listen for enter button on search field -bt
