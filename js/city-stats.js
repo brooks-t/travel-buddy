@@ -255,7 +255,7 @@ function getApi(event) {
 
                     var culture = document.getElementById('culture');
                     cultureAverage = parseInt((artScore + cinemaScore + comedyScore + concertsScore + historyScore + museumsScore + performanceScore + sportsScore + zoosScore)/9);
-                    culture.textContent = 'Overall Culture: ' + cultureAverage + '%';
+                    culture.textContent = cultureAverage + '%';
                     if ( cultureAverage > 74) {
                         culture.setAttribute('style', 'background-color: green; color: white');
                     } else if (cultureAverage < 75 && cultureAverage > 49) {
