@@ -6,6 +6,7 @@ var favButton = document.querySelector('#fav-button');
 var favList = document.querySelector('#dropdown1');
 console.log('Starting out favList: ' + favList);
 
+// retrieve stored list of favorite searches
 function getFavorites() {
     if (localStorage.getItem('storedFavorites') == null) {
         localStorage.setItem('storedFavorites', '[]');
@@ -20,6 +21,7 @@ function getFavorites() {
     }
 }
 
+// search the teleport api
 function getApi(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -273,6 +275,7 @@ function getApi(event) {
     })
 }
 
+// store search when add fav button pressed
 function storeFavorite(event) {
     event.stopPropagation();
 
@@ -291,6 +294,7 @@ function storeFavorite(event) {
 
 }
 
+// search api for favorite when clicked
 function searchFavorite(event) {
     event.stopPropagation();
     var element = event.target;
