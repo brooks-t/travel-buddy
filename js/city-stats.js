@@ -2,7 +2,9 @@
 var searchButton = document.querySelector('#search-button');
 var search = document.querySelector('#search');
 var searchForm = document.querySelector('#search-form');
-var addFavorite = document.querySelector('#dropdown1');
+var favButton = document.querySelector('#fav-button');
+var favList = document.querySelector('#dropdown1');
+console.log('Starting out favList: ' + favList);
 
 function getFavorites() {
     if (localStorage.getItem('storedFavorites') == null) {
@@ -13,7 +15,8 @@ function getFavorites() {
     for (i = 0; i < storedFavorites.length; i++) {
         var savedFavorite = document.createElement('li');
         savedFavorite.textContent = storedFavorites[i];
-        addFavorite.appendChild(savedCity);
+        console.log('populating favorites');
+        favList.appendChild(savedFavorite);
     }
 }
 
@@ -270,11 +273,30 @@ function getApi (event) {
     })
 }
 
+function storeFavorite (event) {
+    event.stopPropagation();
 
+    console.log('You clicked me!');
+
+    var searchCity = search.value;
+    console.log(searchCity);
+
+    var storedFavorites = JSON.parse(localStorage.getItem('storedFavorites'));
+    storedFavorites.push(searchCity);
+    localStorage.setItem('storedFavorites', JSON.stringify(storedFavorites));
+
+    var listFavorite = document.createElement('li');
+    listFavorite.textContent = searchCity;
+    favList.appendChild(listFavorite);
+
+}
+
+getFavorites();
 
 searchButton.addEventListener('click', getApi);
 searchForm.addEventListener('submit', getApi);
-addFavorite.addEventListener('click', )
+favButton.addEventListener('click', storeFavorite);
+
 /* TEMPLATE
 fetch('https://api.teleport.org/api/urban_areas/slug:' + city + '/details/')
     .then(function (response) {
