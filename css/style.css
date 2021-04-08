@@ -105,6 +105,7 @@ max-height: none;
 }
 
 #city-details li {
+    margin-top: 1px;
 }
 
 #city-details span {
