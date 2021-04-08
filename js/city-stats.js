@@ -123,12 +123,12 @@ function getApi (event) {
                     
                     // retrieve and display the city climate
                     var climate = document.getElementById('climate');
-                    climate.textContent = 'Climate: ' + data.categories[2].data[8].string_value;
+                    climate.textContent = data.categories[2].data[8].string_value;
                     console.log('>> Displayed climate to the page');
 
                     // retrieve and display the city language
                     var climate = document.getElementById('language');
-                    language.textContent = 'Language: ' + data.categories[11].data[2].string_value;
+                    language.textContent = data.categories[11].data[2].string_value;
                     console.log('>> Displayed language to the page');
 
                     // retrieve scores for 9 cultural data points and display them
@@ -295,7 +295,7 @@ getFavorites();
 
 searchButton.addEventListener('click', getApi);
 searchForm.addEventListener('submit', getApi);
-favButton.addEventListener('click', storeFavorite);
+//favButton.addEventListener('click', storeFavorite);
 
 /* TEMPLATE
 fetch('https://api.teleport.org/api/urban_areas/slug:' + city + '/details/')
