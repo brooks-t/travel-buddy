@@ -20,7 +20,7 @@ function getFavorites() {
     }
 }
 
-function getApi (event) {
+function getApi(event) {
     event.preventDefault();
     event.stopPropagation();
 
@@ -273,7 +273,7 @@ function getApi (event) {
     })
 }
 
-function storeFavorite (event) {
+function storeFavorite(event) {
     event.stopPropagation();
 
     console.log('You clicked me!');
@@ -291,11 +291,25 @@ function storeFavorite (event) {
 
 }
 
+function searchFavorite(event) {
+    event.stopPropagation();
+    var element = event.target;
+
+    if (element.matches('li')) {
+        var searchAgain = event.target.textContent;
+        console.log("You searched for your favorite: " + searchAgain);
+        search.value = searchAgain;
+        console.log("search bar should now be set to: " + searchAgain);
+        searchButton.click();
+    }
+}
+
 getFavorites();
 
 searchButton.addEventListener('click', getApi);
 searchForm.addEventListener('submit', getApi);
-//favButton.addEventListener('click', storeFavorite);
+favButton.addEventListener('click', storeFavorite);
+favList.addEventListener('click', searchFavorite);
 
 /* TEMPLATE
 fetch('https://api.teleport.org/api/urban_areas/slug:' + city + '/details/')
